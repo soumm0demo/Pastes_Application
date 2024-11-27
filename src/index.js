@@ -13,7 +13,7 @@ import 'remixicon/fonts/remixicon.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
+  <div className='' >
     <BrowserRouter>
 
       <Provider store={store}>
@@ -23,7 +23,7 @@ root.render(
 
       </Provider>
     </BrowserRouter>
-  </>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

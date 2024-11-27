@@ -61,19 +61,19 @@ const Home = () => {
 
     return (
         <div>
-            <div className="flex gap-x-8 mt-4 w-[600px]">
+            <div className="flex sm:gap-x-8 mt-8 sm:mt-8  gap-y-4 mx-auto w-full flex-col sm:flex-row ">
                 <input
                     type="text"
                     value={searchtitle}
                     onChange={(e) => setsearchtitle(e.target.value)}
-                    placeholder="Enter title here"
-                    className="p-4 bg-gray-700 w-[70%] rounded-xl"
+                    placeholder="Give a  title "
+                    className="p-4 bg-gray-700 md:w-[70%] sm:w-[14rem] rounded-xl"
                     disabled={editLock}
 
                 />
                 {
-                    !editLock && (<button className="bg-gray-700 p-4 font-sans  rounded-3xl" onClick={createpaste}>
-                        {pasteId ? "Update paste" : "Create paste "}
+                    !editLock && (<button className="bg-gray-700 p-4 font-sans  rounded-3xl text-[#BFA181] w-[50%] sm:w-[30%] " onClick={createpaste}>
+                        {pasteId ? "Update Paste" : "Create Paste "}
                     </button>)
                 }
             </div>
@@ -83,9 +83,14 @@ const Home = () => {
                     type='textarea'
                     value={value}
                     onChange={(e) => setvalue(e.target.value)}
-                    placeholder="enter content"
-                    className="bg-gray-700 w-[600px] h-[30rem]  mt-12 p-4 rounded-xl outline-none"
-                    rows={20}
+                    placeholder="Jod down your things..."
+                    className="bg-gray-700 
+                    md:w-[36rem] lg:w-[38rem] sm:w-[25rem] w-[22rem] 
+                    md:h-[30rem] h-[24rem]
+                    mt-12 p-4 rounded-xl outline-none
+                    resize-none
+                    "
+                    
                     disabled={editLock}
                 />
 
