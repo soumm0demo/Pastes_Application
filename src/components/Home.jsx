@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { addToPastes, updateToPastes } from "../redux/pasteSlice";
 
@@ -60,8 +60,8 @@ const Home = () => {
 
 
     return (
-        <div>
-            <div className="flex sm:gap-x-8 mt-8 sm:mt-8  gap-y-4 mx-auto w-full flex-col sm:flex-row ">
+        <div className="">
+            <div className="flex sm:gap-x-8 mt-8 ml-4 sm:mt-8  gap-y-4 mx-auto flex-col sm:flex-row ">
                 <input
                     type="text"
                     value={searchtitle}
@@ -77,7 +77,7 @@ const Home = () => {
                     </button>)
                 }
             </div>
-
+ 
             <div>
                 <textarea
                     type='textarea'
